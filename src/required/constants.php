@@ -2,12 +2,13 @@
 
 // Require database connection credentials
 $credentials = parse_ini_file('../../../private/db.ini');
+$config = require __DIR__ . '../../config/db.php';
 
 // Define constants for database connection
-define('DB_HOST', $credentials['host']);
-define('DB_NAME', $credentials['database']);
-define('DB_USER', $credentials['username']);
-define('DB_PASSWORD', $credentials['password']);
+define('DB_HOST', $credentials['host'] ?? $config['host']);
+define('DB_NAME', $credentials['database'] ?? $config['dbname']);
+define('DB_USER', $credentials['username'] ?? $config['user']);
+define('DB_PASSWORD', $credentials['password'] ?? $config['pass']);
 
 // Define constants for site settings
 define('SITE_NAME', $credentials['site_name'] ?? 'My Website');
