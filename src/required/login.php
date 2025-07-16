@@ -25,8 +25,8 @@ if (isset($_POST)) {
     }
 
     // Prepare and execute the select statement
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->execute([$username]);
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
+    $stmt->execute([$username, $username]);
     
     // Fetch user data
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
