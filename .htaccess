@@ -1,4 +1,4 @@
-<Files "db.php">
+<Files "/src/config/db.php">
     Order allow,deny
     Deny from all
 </Files>
