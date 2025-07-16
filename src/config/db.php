@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'dbname' => 'your_database',
-    'user' => 'your_username',
-    'pass' => 'your_password',
+    'dbname' => 'jaribio_db',
+    'user' => 'root',
+    'pass' => 'Prodeveloper-1',
 ];
