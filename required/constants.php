@@ -1,7 +1,7 @@
 <?php
 
 // Require database connection credentials
-$credentials = parse_ini_file('db.ini');
+$credentials = parse_ini_file('../../private/db.ini');
 
 // Define constants for database connection
 define('DB_HOST', $credentials['host']);
